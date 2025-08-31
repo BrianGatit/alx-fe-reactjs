@@ -1,4 +1,15 @@
+function MainContent() {
+  return (
 
-<footer>
-  <p>© 2023 City Lovers</p>
-</footer>
+    <main>
+      <p>I love to visit New York, Paris, and Tokyo.</p>
+    </main>
+
+  );
+}
+export default MainContent;
+
+
+
+
+

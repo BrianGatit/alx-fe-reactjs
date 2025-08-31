@@ -12,8 +12,6 @@ function App() {
       <MainContent />
       <Footer />
 
-
-      
     </div>
   );
 }

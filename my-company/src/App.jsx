@@ -1,26 +1,22 @@
-import './App.css';
-import WelcomeMessage from './components/WelcomeMessage';
-import Header from './components/Header';
-import MainContent from './components/MainContent';
-import Footer from './components/Footer';
-import Counter from './components/Counter';
-import UserProfile from './components/UserProfile';
-import UserContext from './UserContext';
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Contact from "./components/Contact";
 
 function App() {
-  const userData = { name: "Alice", age: 25, bio: "Loves hiking and photography" };
-
   return (
-    <UserContext.Provider value={userData}>
-      <div>
-        <WelcomeMessage />
-        <Header />
-        <MainContent />
-        <Counter />
-        <Footer />
-        <UserProfile />
-      </div>
-    </UserContext.Provider>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 

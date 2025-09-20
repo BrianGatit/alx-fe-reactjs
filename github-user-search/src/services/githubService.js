@@ -1,5 +1,5 @@
 
-// src/services/githubService.js
+//// src/services/githubService.js
 import axios from "axios";
 
 // Base endpoint for GitHub user data
@@ -22,4 +22,6 @@ export const advancedSearchUsers = async ({ query, location, minRepos, page = 1 
 
   // Make API call
   return axios.get(url);
-};
+}; 
+
+
